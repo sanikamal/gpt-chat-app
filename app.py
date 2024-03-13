@@ -1,7 +1,8 @@
 import streamlit as st
 from streamlit_chat import message
 #from langchain import OpenAI
-from langchain_openai import OpenAI
+# from langchain_openai import OpenAI
+from langchain.llms import OpenAI
 from langchain.chains import ConversationChain
 from langchain.memory import (ConversationBufferMemory, 
                                                   ConversationSummaryMemory, 
@@ -33,8 +34,7 @@ def getresponse(userInput, api_key):
 
         llm = OpenAI(
             temperature=0,
-            openai_api_key=api_key,
-            model_name='text-davinci-003'
+            openai_api_key=api_key
         )
 
         st.session_state['conversation'] = ConversationChain(
