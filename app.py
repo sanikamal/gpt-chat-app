@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_chat import message
-from langchain import OpenAI
+#from langchain import OpenAI
+from langchain_openai import OpenAI
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import (ConversationBufferMemory, 
                                                   ConversationSummaryMemory, 
