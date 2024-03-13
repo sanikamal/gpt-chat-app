@@ -34,7 +34,7 @@ def getresponse(userInput, api_key):
         llm = OpenAI(
             temperature=0,
             openai_api_key=api_key,
-            model_name='gpt-3.5-turbo'
+            model_name='text-davinci-003'
         )
 
         st.session_state['conversation'] = ConversationChain(
