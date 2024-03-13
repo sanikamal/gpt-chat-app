@@ -62,7 +62,7 @@ with container:
 
         if submit_button:
             st.session_state['messages'].append(user_input)
-            model_response=getresponse(user_input,st.session_state['API_Key'])
+            model_response=getresponse(user_input,st.session_state['API_KEY'])
             st.session_state['messages'].append(model_response)
             
 
